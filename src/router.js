@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Feather } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native';
+import { StyleSheet} from 'react-native';
 
 import Home from './pages/Home';
 import Curso from './pages/Curso';
@@ -14,13 +15,14 @@ function Routes(){
     return(
         <NavigationContainer>
             <Stack.Navigator>
-            <Stack.Screen   
+            <Stack.Screen
                  name="home"
                  component={Home}
                  options={{
                     title: 'HOME',
+                    backgroundColor: 'red',
                     headerTitleStyle:{
-                        fontFamily: 'Montserrat_700Bold'
+                        fontFamily: 'Montserrat_700Bold',
                     },
                     headerRight: () => (
                         <TouchableOpacity style={{marginRight: 15}}>                     
@@ -40,7 +42,7 @@ function Routes(){
                  options={{
                     title: 'Curso',
                     headerTitleStyle:{
-                        fontFamily: 'Montserrat_700Bold'
+                        fontFamily: 'Montserrat_700Bold',
                     },
                     headerRight: () => (
                         <TouchableOpacity style={{marginRight: 15}}>
@@ -59,3 +61,9 @@ function Routes(){
 }
 
 export default Routes;
+
+const styles = StyleSheet.create({
+    rotas: {
+        backgroundColor: '#ff9932'
+    }
+});

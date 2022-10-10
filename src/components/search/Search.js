@@ -22,7 +22,8 @@ export default Search;
 const styles = StyleSheet.create({
     search: {
         borderRadius: 20,
-        width: '90%',
+        width: '80%',
         alignSelf: 'center',
+        height: 40
     }    
 });

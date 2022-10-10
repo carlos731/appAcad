@@ -1,14 +1,13 @@
 import * as React from 'react';
-import { Avatar, Card, IconButton } from 'react-native-paper';
+import { Card, Button } from 'react-native-paper';
 
-export default function CardUcs(props){
-    return(
-        <Card.Title
-        title="Card Title"
-        subtitle="Card Subtitle"
-        left={(props) => <Avatar.Icon {...props} icon="folder" />}
-        right={(props) => <IconButton {...props} icon="more-vert" onPress={() => {}} />}
-      />
-    );
-}
+const CardUcs = () => (
+  <Card>
+    <Card.Actions>
+      <Button>Cancel</Button>
+      <Button>Ok</Button>
+    </Card.Actions>
+  </Card>
+);
 
+export default CardUcs;

@@ -1,25 +1,26 @@
 import * as React from 'react';
-import { BottomNavigation, Text } from 'react-native-paper';
+import { StyleSheet, View} from 'react-native';
+import { BottomNavigation, Text, } from 'react-native-paper';
 
-const MusicRoute = () => <Text>Music</Text>;
+const HomeRoute = () => <View>Home</View>;
 
-const AlbumsRoute = () => <Text>Albums</Text>;
+const AlbumsRoute = () => <Text></Text>;
 
-const RecentsRoute = () => <Text>Recents</Text>;
+const RecentsRoute = () => <Text></Text>;
 
-const NotificationsRoute = () => <Text>Notifications</Text>;
+const NotificationsRoute = () => <Text></Text>;
 
 const ButtonNavigation = () => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
-    { key: 'music', title: 'Favorites', focusedIcon: 'heart', unfocusedIcon: 'heart-outline'},
-    { key: 'albums', title: 'Albums', focusedIcon: 'album' },
-    { key: 'recents', title: 'Recents', focusedIcon: 'history' },
+    { key: 'home', title: 'Home', focusedIcon: 'home', unfocusedIcon: 'home-outline'},
+    { key: 'albums', title: 'Calendário', focusedIcon: 'calendar', unfocusedIcon: 'calendar-outline' },
+    { key: 'recents', title: 'Cursos', focusedIcon: 'book', unfocusedIcon: 'book-outline' },
     { key: 'notifications', title: 'Notifications', focusedIcon: 'bell', unfocusedIcon: 'bell-outline' },
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
-    music: MusicRoute,
+    home: HomeRoute,
     albums: AlbumsRoute,
     recents: RecentsRoute,
     notifications: NotificationsRoute,
@@ -27,6 +28,8 @@ const ButtonNavigation = () => {
 
   return (
     <BottomNavigation
+      inactiveColor='#00315a'
+      activeColor='#ff9932'
       navigationState={{ index, routes }}
       onIndexChange={setIndex}
       renderScene={renderScene}
@@ -35,3 +38,9 @@ const ButtonNavigation = () => {
 };
 
 export default ButtonNavigation;
+
+const styles = StyleSheet.create({
+  fundo: {
+      backgroundColor: '#ff9932'
+  }
+});

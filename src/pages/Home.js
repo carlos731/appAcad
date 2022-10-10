@@ -13,7 +13,7 @@ export default function Home(){
 
 
     return(
-        <ScrollView showsVerticalScrollIndicator={false} style={{backgroundColor: '#FFF', }} >
+        <View showsVerticalScrollIndicator={false} style={{backgroundColor: '#FFF', }} >
             <View style={styles.header}>
                 <View>
                     <Search></Search>
@@ -29,8 +29,25 @@ export default function Home(){
                     description="Graduação"
                     onPress={() => navigation.navigate('curso')} style={styles.title}
                 />
+                <CardCurso
+                    name="Infraestrutura de redes"
+                    description="Graduação"
+                    onPress={() => navigation.navigate('curso')} style={styles.title}
+                />
+                <CardCurso
+                    name="Design Gráfico"
+                    description="Graduação"
+                    onPress={() => navigation.navigate('curso')} style={styles.title}
+                />
+                <CardCurso
+                    name="Técnico de Informática"
+                    description="Graduação"
+                    onPress={() => navigation.navigate('curso')} style={styles.title}
+                />
+                
             </ScrollView>
-        </ScrollView>
+            
+        </View>
     );
 }
 

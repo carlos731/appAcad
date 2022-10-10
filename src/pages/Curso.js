@@ -9,8 +9,10 @@ export default function Curso(){
             <Text>Tela do Curso</Text>
 
             <ScrollView>
-                <CardUcs></CardUcs>
+                <View></View>
             </ScrollView>
+
+            <CardUcs></CardUcs>
         </View>
     );
 }
